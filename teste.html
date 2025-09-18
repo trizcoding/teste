@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>teste</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #FFB6C1;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background: #FFB6C1;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #FFB6C1;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    /* Estilo do modal */
+    .modal {
+      display: none; /* escondido por padrão */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+      margin: 5% auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh; /* limite de altura para caber na tela */
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #FFB6C1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>oiiiiii</h1> 
+    <p>bem vinda sra amabili cristina alexandre</p>
+  </header>
+
+  <nav>
+    <a id="openModal">clica aqui</a>
+  </nav>
+
+  <main>
+    <h2>hahayyyy</h2>
+    <p>
+      no aguardo da foto do meu presente
+    </p>
+  </main>
+
+  <footer>
+    <p>tchau beijo</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" src="canguru.png.jpeg" alt="presente" />
+  </div>
+
+  <script>
+    const modal = document.getElementById("myModal");
+    const btn = document.getElementById("openModal");
+    const span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
